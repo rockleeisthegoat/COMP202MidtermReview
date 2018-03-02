@@ -1,0 +1,109 @@
+1)double
+
+2)0.0
+
+3)4
+
+4)10 20 10 10
+
+5)3
+
+6)ArrayIndexOutOfBounds runtime error
+
+7)33333
+
+8)No
+
+9)no
+
+10)yes
+
+11)100
+
+12)does not compile (or infinite loop was also accepted)
+
+13)infinite loop
+
+14)50
+
+15)10
+
+16)1 false
+
+17)0 1 2 3
+
+18)EFG
+
+19)true false true false
+
+20)2
+
+Programming:
+
+public class Midterm {
+
+public static int sum(int[] numbers) {
+
+int total= 0;
+
+for (int i = 0 ; i < numbers.length; i++) {
+
+total = total + numbers[i];
+
+}
+
+return total;
+
+}
+
+public static int[] removeNegatives(int[] numbers) {
+
+int count = 0;
+
+for (int i = 0; i < numbers.length; i++) {
+
+if (numbers[i] >= 0) {
+
+count++;
+
+}
+
+}
+
+int[] positives = new int[count];
+
+int dest = 0;
+
+for (int i = 0; i < numbers.length; i++) {
+
+if (numbers[i] >= 0) {
+
+positives[dest] = numbers[i];
+
+dest++;
+
+}
+
+}
+
+return positives;
+
+}
+
+public static void main(String[] args) {
+
+  int[] asNumbers = new int[args.length];
+
+for (int i = 0; i < args.length; i++) {
+
+asNumbers[i] = Integer.parseInt(args[i]);
+
+}
+
+double average = (double)sum(removeNegatives(asNumbers)) / asNumbers.length;
+
+System.out.println("The average is " + average);
+
+}
+
+}
