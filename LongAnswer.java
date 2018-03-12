@@ -1,10 +1,14 @@
 public static boolean productOfTwoPrimes(int num){
-	for (int firstPrime=3; firstPrime<num); firstPrime++){
+	// Check each possible prime
+	for (int firstPrime=3; firstPrime<num; firstPrime++){
+		// If prime is a factor
 		if (num%i == 0 && isPrime(firstPrime)){ 
+			// See if quotient is a prime
 			int quotient = num/firstPrime;
-			if isPrime(quotient) return true;
+			if (isPrime(quotient)) return true; // If yes, exit method and return true
 		}
 	}
+	// If reached here, cannot be divided by two prime numbers
 	return false;
 }
 
